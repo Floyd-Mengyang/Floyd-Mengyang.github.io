@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://yoursite.com/2017/04/08/hello-world/</loc>
-    <lastmod>2017-04-08T14:47:07.000Z</lastmod>
+    <lastmod>2017-04-08T15:09:16.000Z</lastmod>
     <data>
         <display>
         <title>How to use Hexo</title>
-        <pubTime>2017-04-08T14:47:07.000Z</pubTime>
+        <pubTime>2017-04-08T15:09:16.000Z</pubTime>
         
+        <tag>Hexo</tag>
+         
          
            
+             
+              <breadCrumb title="Test" url="http://yoursite.com/categories/Test/"/>
+          
         </display>
     </data>
     </url>
