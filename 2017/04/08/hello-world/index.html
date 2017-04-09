@@ -158,6 +158,12 @@
 
 	
 
+<section id="comments" class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
@@ -227,6 +233,10 @@
           </li>
         
     </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -404,6 +414,26 @@ $(document).ready(function(){
 
 
 
+<script type="text/javascript">
+
+var disqus_shortname = 'ArcherFMY';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
 
 
 
@@ -461,3 +491,4 @@ $(document).ready(function(){
 
   </body>
 </html>
+
