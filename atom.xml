@@ -4,9 +4,9 @@
   <subtitle>Life is the art of drawing without an eraser</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://archerfmy.github.io/"/>
   <updated>2017-04-09T02:25:32.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://archerfmy.github.io/</id>
   
   <author>
     <name>ArcherFMY</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
-    <link href="http://yoursite.com/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/"/>
-    <id>http://yoursite.com/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</id>
+    <link href="http://archerfmy.github.io/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/"/>
+    <id>http://archerfmy.github.io/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</id>
     <published>2017-04-09T02:25:32.000Z</published>
     <updated>2017-04-09T02:25:32.000Z</updated>
     
@@ -35,19 +35,19 @@
     
     </summary>
     
-      <category term="Deeplearning" scheme="http://yoursite.com/categories/Deeplearning/"/>
+      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
     
     
-      <category term="Cuda" scheme="http://yoursite.com/tags/Cuda/"/>
+      <category term="Cuda" scheme="http://archerfmy.github.io/tags/Cuda/"/>
     
-      <category term="caffe" scheme="http://yoursite.com/tags/caffe/"/>
+      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
     
   </entry>
   
   <entry>
     <title>make runtest error</title>
-    <link href="http://yoursite.com/2017/04/09/make-runtest-error/"/>
-    <id>http://yoursite.com/2017/04/09/make-runtest-error/</id>
+    <link href="http://archerfmy.github.io/2017/04/09/make-runtest-error/"/>
+    <id>http://archerfmy.github.io/2017/04/09/make-runtest-error/</id>
     <published>2017-04-09T01:35:31.000Z</published>
     <updated>2017-04-09T01:35:31.000Z</updated>
     
@@ -64,17 +64,17 @@
     
     </summary>
     
-      <category term="Deeplearning" scheme="http://yoursite.com/categories/Deeplearning/"/>
+      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
     
     
-      <category term="caffe" scheme="http://yoursite.com/tags/caffe/"/>
+      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
     
   </entry>
   
   <entry>
     <title>How to use Hexo</title>
-    <link href="http://yoursite.com/2017/04/08/hello-world/"/>
-    <id>http://yoursite.com/2017/04/08/hello-world/</id>
+    <link href="http://archerfmy.github.io/2017/04/08/hello-world/"/>
+    <id>http://archerfmy.github.io/2017/04/08/hello-world/</id>
     <published>2017-04-08T15:11:20.000Z</published>
     <updated>2017-04-08T15:11:20.000Z</updated>
     
@@ -95,10 +95,10 @@
     
     </summary>
     
-      <category term="Test" scheme="http://yoursite.com/categories/Test/"/>
+      <category term="Test" scheme="http://archerfmy.github.io/categories/Test/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://archerfmy.github.io/tags/Hexo/"/>
     
   </entry>
   
