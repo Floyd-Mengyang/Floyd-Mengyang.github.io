@@ -38,9 +38,9 @@
       <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
     
     
-      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
-    
       <category term="Cuda" scheme="http://archerfmy.github.io/tags/Cuda/"/>
+    
+      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
     
   </entry>
   
