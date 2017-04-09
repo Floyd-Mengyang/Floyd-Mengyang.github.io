@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</loc>
+    
+    <lastmod>2017-04-09T02:19:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/04/09/make-runtest-error/</loc>
     
     <lastmod>2017-04-09T01:35:31.000Z</lastmod>

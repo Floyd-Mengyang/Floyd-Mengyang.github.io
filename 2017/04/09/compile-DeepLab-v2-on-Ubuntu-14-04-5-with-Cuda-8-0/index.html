@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>make runtest error | Welcome to Mengyang&#39;s Homepage</title>
+    <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0 | Welcome to Mengyang&#39;s Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="ArcherFMY">
     
 
     
-    <meta name="description" content="caffe users:1Erro during compilation (make runtest): &quot;error while loading shared libraries: libcudart.so.6.5&quot; For all the other folks who stop by looking for a solution: Try:32-bit:1$ sudo ldconfig /u">
-<meta name="keywords" content="caffe">
+    <meta name="description" content="Problem:error: function &amp;quot;atomicAdd(double *, double)&amp;quot; has already been defined Somebody get this error while trying to compile the cafffe derivative DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.">
+<meta name="keywords" content="Cuda,caffe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="make runtest error">
-<meta property="og:url" content="http://yoursite.com/2017/04/09/make-runtest-error/index.html">
+<meta property="og:title" content="compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0">
+<meta property="og:url" content="http://yoursite.com/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/index.html">
 <meta property="og:site_name" content="Welcome to Mengyang's Homepage">
-<meta property="og:description" content="caffe users:1Erro during compilation (make runtest): &quot;error while loading shared libraries: libcudart.so.6.5&quot; For all the other folks who stop by looking for a solution: Try:32-bit:1$ sudo ldconfig /u">
-<meta property="og:updated_time" content="2017-04-09T01:35:31.000Z">
+<meta property="og:description" content="Problem:error: function &amp;quot;atomicAdd(double *, double)&amp;quot; has already been defined Somebody get this error while trying to compile the cafffe derivative DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.">
+<meta property="og:updated_time" content="2017-04-09T02:19:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="make runtest error">
-<meta name="twitter:description" content="caffe users:1Erro during compilation (make runtest): &quot;error while loading shared libraries: libcudart.so.6.5&quot; For all the other folks who stop by looking for a solution: Try:32-bit:1$ sudo ldconfig /u">
+<meta name="twitter:title" content="compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0">
+<meta name="twitter:description" content="Problem:error: function &amp;quot;atomicAdd(double *, double)&amp;quot; has already been defined Somebody get this error while trying to compile the cafffe derivative DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.">
 
     
     <link rel="alternative" href="/atom.xml" title="Welcome to Mengyang&#39;s Homepage" type="application/atom+xml">
@@ -81,14 +81,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/09/make-runtest-error/" title="make runtest error" itemprop="url">make runtest error</a>
+      <a href="/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/" title="compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0" itemprop="url">compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="ArcherFMY" target="_blank" itemprop="author">ArcherFMY</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-09T01:35:31.000Z" itemprop="datePublished"> Published 2017-04-09</time>
+    <time datetime="2017-04-09T02:19:56.000Z" itemprop="datePublished"> Published 2017-04-09</time>
     
   </p>
 </header>
@@ -97,15 +97,15 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Try"><span class="toc-number">1.</span> <span class="toc-text">Try:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#32-bit"><span class="toc-number">1.1.</span> <span class="toc-text">32-bit:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#64-bit"><span class="toc-number">1.2.</span> <span class="toc-text">64-bit:</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem"><span class="toc-number">1.</span> <span class="toc-text">Problem:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution"><span class="toc-number">2.</span> <span class="toc-text">Solution:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Analysis"><span class="toc-number">2.1.</span> <span class="toc-text">Analysis:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-do"><span class="toc-number">2.2.</span> <span class="toc-text">How to do:</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>caffe users:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Erro during compilation (make runtest): <span class="string">"error while loading shared libraries: libcudart.so.6.5"</span></div></pre></td></tr></table></figure></p>
-<p>For all the other folks who stop by looking for a solution:</p>
-<h2 id="Try"><a href="#Try" class="headerlink" title="Try:"></a>Try:</h2><h3 id="32-bit"><a href="#32-bit" class="headerlink" title="32-bit:"></a>32-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib</div></pre></td></tr></table></figure>
-<h3 id="64-bit"><a href="#64-bit" class="headerlink" title="64-bit:"></a>64-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
-<p>source: <a href="http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu" target="_blank" rel="external">http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu</a></p>
+		<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem:"></a>Problem:</h2><pre><code>error: function &quot;atomicAdd(double *, double)&quot; has already been defined
+</code></pre><p>Somebody get this error while trying to compile the cafffe derivative <a href="https://bitbucket.org/aquariusjay/deeplab-public-ver2" target="_blank" rel="external">DeepLab_v2</a> on Ubuntu 14.04.5 with Cuda 8.0.</p>
+<p>Maybe DeepLab_v2 compiles fine on another computer that has Cuda 7.5.</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis:"></a>Analysis:</h3><p>CUDA 8.0 provides a definition of <code>atomicAdd</code> on <code>double</code> quantities that was not present in previous CUDA toolkits. The code you are working with also apparently provides its own definition/implementation, and this is the source of the error message. The correct fix is to make source code changes to the software in question to make it compatible with CUDA 8. –<a href="stackoverflow.com/users/1695960/robert-crovella">Robert Crovella</a></p>
+<h3 id="How-to-do"><a href="#How-to-do" class="headerlink" title="How to do:"></a>How to do:</h3><p>The solution provided by @Robert Crovella works for me. I had to modify the file <code>common.cuh</code> from the DeepLab_v2 master branch in the following way:<br>      <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#ifndef CAFFE_COMMON_CUH_</span></div><div class="line"><span class="comment">#define CAFFE_COMMON_CUH_</span></div><div class="line"></div><div class="line"><span class="comment">#include &lt;cuda.h&gt;</span></div><div class="line"></div><div class="line">   <span class="comment">#if !defined(__CUDA_ARCH__) || __CUDA_ARCH__ &gt;=600</span></div><div class="line"></div><div class="line">   <span class="comment">#else</span></div><div class="line">   static __inline__ __device__ double atomicAdd(double *address, double val) &#123;</div><div class="line">       unsigned long long int* address_as_ull = (unsigned long long int*)address;</div><div class="line">       unsigned long long int old = *address_as_ull, assumed;</div><div class="line">       <span class="keyword">if</span> (val==0.0)</div><div class="line">         <span class="built_in">return</span> __longlong_as_double(old);</div><div class="line">       <span class="keyword">do</span> &#123;</div><div class="line">           assumed = old;</div><div class="line">           old = atomicCAS(address_as_ull, assumed, __double_as_longlong(val +__longlong_as_double(assumed)));</div><div class="line">       &#125; <span class="keyword">while</span> (assumed != old);</div><div class="line">       <span class="built_in">return</span> __longlong_as_double(old);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="comment">#endif</span></div><div class="line"><span class="comment">#endif</span></div></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -119,7 +119,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/caffe/">caffe</a>
+  <span></span> <a href="/tags/Cuda/">Cuda</a><a href="/tags/caffe/">caffe</a>
   </div>
 
 </div>
@@ -128,7 +128,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/04/09/make-runtest-error/" data-title="make runtest error | Welcome to Mengyang&#39;s Homepage" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/" data-title="compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0 | Welcome to Mengyang&#39;s Homepage" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -142,21 +142,13 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/04/08/hello-world/" title="How to use Hexo">
+ <a href="/2017/04/09/make-runtest-error/" title="make runtest error">
   <strong>上一篇：</strong><br/>
   <span>
-  How to use Hexo</span>
+  make runtest error</span>
 </a>
 </div>
 
-
-<div class="next">
-<a href="/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/"  title="compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0">
- <strong>下一篇：</strong><br/> 
- <span>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0
-</span>
-</a>
-</div>
 
 </nav>
 
@@ -168,7 +160,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Try"><span class="toc-number">1.</span> <span class="toc-text">Try:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#32-bit"><span class="toc-number">1.1.</span> <span class="toc-text">32-bit:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#64-bit"><span class="toc-number">1.2.</span> <span class="toc-text">64-bit:</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem"><span class="toc-number">1.</span> <span class="toc-text">Problem:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution"><span class="toc-number">2.</span> <span class="toc-text">Solution:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Analysis"><span class="toc-number">2.1.</span> <span class="toc-text">Analysis:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-do"><span class="toc-number">2.2.</span> <span class="toc-text">How to do:</span></a></li></ol></li></ol>
  
   </div>
 
