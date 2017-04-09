@@ -11,9 +11,9 @@
         <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
         <pubTime>2017-04-09T02:25:32.000Z</pubTime>
         
-        <tag>Cuda</tag>
-         
         <tag>caffe</tag>
+         
+        <tag>Cuda</tag>
          
          
            
