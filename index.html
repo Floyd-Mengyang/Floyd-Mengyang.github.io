@@ -173,6 +173,8 @@
                         
                             <li><a href="/tags/">tags cloud</a></li>
                         
+                            <li><a href="/about/">about me</a></li>
+                        
                         </ul>
                     </nav>
                     <nav class="header-nav">
@@ -246,6 +248,8 @@
                 
                     <li><a href="/tags/">tags cloud</a></li>
                 
+                    <li><a href="/about/">about me</a></li>
+                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
@@ -266,11 +270,88 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-make-runtest-error" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/10/make-runtest-error/" class="article-date">
+      <time datetime="2017-04-10T12:34:08.759Z" itemprop="datePublished">2017-04-10</time>
+</a>
+
+ 
+    <a href="/2017/04/10/make-runtest-error/#comments" title="Comments">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2017/04/10/make-runtest-error/"></span>
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/10/make-runtest-error/">make runtest error</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>caffe users:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Erro during compilation (make runtest): <span class="string">"error while loading shared libraries: libcudart.so.6.5"</span></div></pre></td></tr></table></figure></p>
+<p>For all the other folks who stop by looking for a solution:</p>
+<h2 id="Try"><a href="#Try" class="headerlink" title="Try:"></a>Try:</h2><h3 id="32-bit"><a href="#32-bit" class="headerlink" title="32-bit:"></a>32-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib</div></pre></td></tr></table></figure>
+<h3 id="64-bit"><a href="#64-bit" class="headerlink" title="64-bit:"></a>64-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
+<p>source: <a href="http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu" target="_blank" rel="external">http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Deeplearning/">Deeplearning</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2017/04/10/hello-world/" class="article-date">
-      <time datetime="2017-04-10T12:16:59.035Z" itemprop="datePublished">2017-04-10</time>
+      <time datetime="2017-04-10T12:34:08.757Z" itemprop="datePublished">2017-04-10</time>
 </a>
 
  
@@ -351,7 +432,7 @@
   
     <div class="article-meta">
       <a href="/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/" class="article-date">
-      <time datetime="2017-04-10T12:16:59.034Z" itemprop="datePublished">2017-04-10</time>
+      <time datetime="2017-04-10T12:34:08.752Z" itemprop="datePublished">2017-04-10</time>
 </a>
 
  
@@ -405,83 +486,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cuda/">Cuda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-make-runtest-error" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/04/10/make-runtest-error/" class="article-date">
-      <time datetime="2017-04-10T12:16:59.029Z" itemprop="datePublished">2017-04-10</time>
-</a>
-
- 
-    <a href="/2017/04/10/make-runtest-error/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2017/04/10/make-runtest-error/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/make-runtest-error/">make runtest error</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>caffe users:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Erro during compilation (make runtest): <span class="string">"error while loading shared libraries: libcudart.so.6.5"</span></div></pre></td></tr></table></figure></p>
-<p>For all the other folks who stop by looking for a solution:</p>
-<h2 id="Try"><a href="#Try" class="headerlink" title="Try:"></a>Try:</h2><h3 id="32-bit"><a href="#32-bit" class="headerlink" title="32-bit:"></a>32-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib</div></pre></td></tr></table></figure>
-<h3 id="64-bit"><a href="#64-bit" class="headerlink" title="64-bit:"></a>64-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
-<p>source: <a href="http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu" target="_blank" rel="external">http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Deeplearning/">Deeplearning</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
     </div>
 
       

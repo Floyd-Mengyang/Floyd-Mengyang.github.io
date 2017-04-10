@@ -5,11 +5,11 @@
     
   <url>
     <loc>http://archerfmy.github.io/2017/04/10/make-runtest-error/</loc>
-    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
+    <lastmod>2017-04-10T12:33:40.000Z</lastmod>
     <data>
         <display>
         <title>make runtest error</title>
-        <pubTime>2017-04-10T12:16:59.029Z</pubTime>
+        <pubTime>2017-04-10T12:34:08.759Z</pubTime>
         
         <tag>caffe</tag>
          
@@ -25,15 +25,15 @@
     
   <url>
     <loc>http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</loc>
-    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
+    <lastmod>2017-04-10T12:33:36.000Z</lastmod>
     <data>
         <display>
         <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
-        <pubTime>2017-04-10T12:16:59.034Z</pubTime>
+        <pubTime>2017-04-10T12:34:08.752Z</pubTime>
         
-        <tag>caffe</tag>
-         
         <tag>Cuda</tag>
+         
+        <tag>caffe</tag>
          
          
            
@@ -47,11 +47,11 @@
     
   <url>
     <loc>http://archerfmy.github.io/2017/04/10/hello-world/</loc>
-    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
+    <lastmod>2017-04-10T12:33:33.000Z</lastmod>
     <data>
         <display>
         <title>How to use Hexo</title>
-        <pubTime>2017-04-10T12:16:59.035Z</pubTime>
+        <pubTime>2017-04-10T12:34:08.757Z</pubTime>
         
         <tag>Hexo</tag>
          
@@ -64,6 +64,7 @@
     </data>
     </url>
 
+    
     
     
     
