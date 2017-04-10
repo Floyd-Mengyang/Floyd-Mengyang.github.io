@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://archerfmy.github.io/about/index.html</loc>
+    
+    <lastmod>2017-04-10T12:42:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://archerfmy.github.io/2017/04/10/make-runtest-error/</loc>
     
     <lastmod>2017-04-10T12:33:40.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://archerfmy.github.io/2017/04/10/hello-world/</loc>
     
     <lastmod>2017-04-10T12:33:33.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://archerfmy.github.io/about/index.html</loc>
-    
-    <lastmod>2017-04-10T12:24:24.000Z</lastmod>
     
   </url>
   
