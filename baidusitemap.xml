@@ -4,32 +4,12 @@
 
     
   <url>
-    <loc>http://archerfmy.github.io/2017/04/10/hello-world/</loc>
-    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>How to use Hexo</title>
-        <pubTime>2017-04-10T10:07:02.834Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Test" url="http://archerfmy.github.io/categories/Test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</loc>
     <lastmod>2017-04-10T09:25:22.000Z</lastmod>
     <data>
         <display>
         <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
-        <pubTime>2017-04-10T10:07:02.839Z</pubTime>
+        <pubTime>2017-04-10T10:28:15.961Z</pubTime>
         
         <tag>Cuda</tag>
          
@@ -51,7 +31,7 @@
     <data>
         <display>
         <title>make runtest error</title>
-        <pubTime>2017-04-10T10:07:02.841Z</pubTime>
+        <pubTime>2017-04-10T10:28:15.966Z</pubTime>
         
         <tag>caffe</tag>
          
@@ -59,6 +39,26 @@
            
              
               <breadCrumb title="Deeplearning" url="http://archerfmy.github.io/categories/Deeplearning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://archerfmy.github.io/2017/04/10/hello-world/</loc>
+    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>How to use Hexo</title>
+        <pubTime>2017-04-10T10:28:15.967Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Test" url="http://archerfmy.github.io/categories/Test/"/>
           
         </display>
     </data>
