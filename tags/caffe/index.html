@@ -68,7 +68,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -102,6 +102,13 @@
         <p class="header-subtitle">Life is the art of drawing without an eraser</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -274,7 +281,7 @@
     <header class="archive-article-header">
           <div class="article-meta">
               <a href="/2017/04/10/make-runtest-error/" class="archive-article-date">
-      <time datetime="2017-04-10T09:46:02.337Z" itemprop="datePublished">04-10</time>
+      <time datetime="2017-04-10T09:53:29.645Z" itemprop="datePublished">04-10</time>
 </a>
 
 
@@ -311,7 +318,7 @@
     <header class="archive-article-header">
           <div class="article-meta">
               <a href="/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/" class="archive-article-date">
-      <time datetime="2017-04-10T09:46:02.331Z" itemprop="datePublished">04-10</time>
+      <time datetime="2017-04-10T09:53:29.639Z" itemprop="datePublished">04-10</time>
 </a>
 
 

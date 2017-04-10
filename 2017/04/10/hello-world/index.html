@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -107,6 +107,13 @@
         <p class="header-subtitle">Life is the art of drawing without an eraser</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -265,7 +272,7 @@
   
     <div class="article-meta">
       <a href="/2017/04/10/hello-world/" class="article-date">
-      <time datetime="2017-04-10T09:46:02.336Z" itemprop="datePublished">2017-04-10</time>
+      <time datetime="2017-04-10T09:53:29.646Z" itemprop="datePublished">2017-04-10</time>
 </a>
 
 
@@ -324,7 +331,7 @@
     <div class="copyright">
         <p><span>Title:</span><a href="/2017/04/10/hello-world/">How to use Hexo</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">ArcherFMY</a></p>
-        <p><span>Created:</span>2017-04-10, 17:46:02</p>
+        <p><span>Created:</span>2017-04-10, 17:53:29</p>
         <p><span>Updated:</span>2017-04-10, 17:25:22</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2017/04/10/hello-world/" title="How to use Hexo">http://archerfmy.github.io/2017/04/10/hello-world/</a>
@@ -341,17 +348,11 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/">
-                    compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
                 <a href="/2017/04/10/make-runtest-error/">
                     make runtest error
                 </a>
             </div>
+        
         
     </nav>
 
@@ -411,13 +412,35 @@
 
 
     
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://archerfmy.github.io/2017/04/10/hello-world/';
+            this.page.identifier = '2017/04/10/hello-world/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//ArcherFMY.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
 
 
 
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/" title="Pre: compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0">
+            <a href="/2017/04/10/make-runtest-error/" title="Pre: make runtest error">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -425,13 +448,11 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/04/10/make-runtest-error/" title="Next: make runtest error">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/make-runtest-error/">make runtest error</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/hello-world/">How to use Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/">compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/hello-world/">How to use Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/make-runtest-error/">make runtest error</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/">compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</a></li></ul>
 
 
 
