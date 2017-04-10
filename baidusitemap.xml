@@ -4,19 +4,19 @@
 
     
   <url>
-    <loc>http://archerfmy.github.io/2017/04/10/hello-world/</loc>
+    <loc>http://archerfmy.github.io/2017/04/10/make-runtest-error/</loc>
     <lastmod>2017-04-10T09:25:22.000Z</lastmod>
     <data>
         <display>
-        <title>How to use Hexo</title>
-        <pubTime>2017-04-10T10:29:00.024Z</pubTime>
+        <title>make runtest error</title>
+        <pubTime>2017-04-10T12:16:59.029Z</pubTime>
         
-        <tag>Hexo</tag>
+        <tag>caffe</tag>
          
          
            
              
-              <breadCrumb title="Test" url="http://archerfmy.github.io/categories/Test/"/>
+              <breadCrumb title="Deeplearning" url="http://archerfmy.github.io/categories/Deeplearning/"/>
           
         </display>
     </data>
@@ -29,11 +29,11 @@
     <data>
         <display>
         <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
-        <pubTime>2017-04-10T10:29:00.030Z</pubTime>
+        <pubTime>2017-04-10T12:16:59.034Z</pubTime>
         
-        <tag>Cuda</tag>
-         
         <tag>caffe</tag>
+         
+        <tag>Cuda</tag>
          
          
            
@@ -46,19 +46,19 @@
 
     
   <url>
-    <loc>http://archerfmy.github.io/2017/04/10/make-runtest-error/</loc>
+    <loc>http://archerfmy.github.io/2017/04/10/hello-world/</loc>
     <lastmod>2017-04-10T09:25:22.000Z</lastmod>
     <data>
         <display>
-        <title>make runtest error</title>
-        <pubTime>2017-04-10T10:29:00.032Z</pubTime>
+        <title>How to use Hexo</title>
+        <pubTime>2017-04-10T12:16:59.035Z</pubTime>
         
-        <tag>caffe</tag>
+        <tag>Hexo</tag>
          
          
            
              
-              <breadCrumb title="Deeplearning" url="http://archerfmy.github.io/categories/Deeplearning/"/>
+              <breadCrumb title="Test" url="http://archerfmy.github.io/categories/Test/"/>
           
         </display>
     </data>

@@ -16,66 +16,10 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>make runtest error</title>
-    <link href="http://archerfmy.github.io/2017/04/10/make-runtest-error/"/>
-    <id>http://archerfmy.github.io/2017/04/10/make-runtest-error/</id>
-    <published>2017-04-10T10:29:00.032Z</published>
-    <updated>2017-04-10T09:25:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>caffe users:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Erro during compilation (make runtest): <span class="string">"error while loading shared libraries: libcudart.so.6.5"</span></div></pre></td></tr></table></figure></p>
-<p>For all the other folks who stop by looking for a solution:</p>
-<h2 id="Try"><a href="#Try" class="headerlink" title="Try:"></a>Try:</h2><h3 id="32-bit"><a href="#32-bit" class="headerlink" title="32-bit:"></a>32-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib</div></pre></td></tr></table></figure>
-<h3 id="64-bit"><a href="#64-bit" class="headerlink" title="64-bit:"></a>64-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
-<p>source: <a href="http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu" target="_blank" rel="external">http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;caffe users:&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;p
-    
-    </summary>
-    
-      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
-    
-    
-      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
-    <link href="http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/"/>
-    <id>http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</id>
-    <published>2017-04-10T10:29:00.030Z</published>
-    <updated>2017-04-10T09:25:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem:"></a>Problem:</h2><pre><code>error: function &quot;atomicAdd(double *, double)&quot; has already been defined
-</code></pre><p>Somebody get this error while trying to compile the cafffe derivative <a href="https://bitbucket.org/aquariusjay/deeplab-public-ver2" target="_blank" rel="external">DeepLab_v2</a> on Ubuntu 14.04.5 with Cuda 8.0.</p>
-<p>Maybe DeepLab_v2 compiles fine on another computer that has Cuda 7.5.</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis:"></a>Analysis:</h3><p>CUDA 8.0 provides a definition of <code>atomicAdd</code> on <code>double</code> quantities that was not present in previous CUDA toolkits. The code you are working with also apparently provides its own definition/implementation, and this is the source of the error message. The correct fix is to make source code changes to the software in question to make it compatible with CUDA 8. –<a href="http://stackoverflow.com/users/1695960/robert-crovella" target="_blank" rel="external">Robert Crovella</a></p>
-<h3 id="How-to-do"><a href="#How-to-do" class="headerlink" title="How to do:"></a>How to do:</h3><p>The solution provided by @Robert Crovella works for me. I had to modify the file <code>common.cuh</code> from the DeepLab_v2 master branch in the following way:<br>      <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#ifndef CAFFE_COMMON_CUH_</span></div><div class="line"><span class="comment">#define CAFFE_COMMON_CUH_</span></div><div class="line"></div><div class="line"><span class="comment">#include &lt;cuda.h&gt;</span></div><div class="line"></div><div class="line">   <span class="comment">#if !defined(__CUDA_ARCH__) || __CUDA_ARCH__ &gt;=600</span></div><div class="line"></div><div class="line">   <span class="comment">#else</span></div><div class="line">   static __inline__ __device__ double atomicAdd(double *address, double val) &#123;</div><div class="line">       unsigned long long int* address_as_ull = (unsigned long long int*)address;</div><div class="line">       unsigned long long int old = *address_as_ull, assumed;</div><div class="line">       <span class="keyword">if</span> (val==0.0)</div><div class="line">         <span class="built_in">return</span> __longlong_as_double(old);</div><div class="line">       <span class="keyword">do</span> &#123;</div><div class="line">           assumed = old;</div><div class="line">           old = atomicCAS(address_as_ull, assumed, __double_as_longlong(val +__longlong_as_double(assumed)));</div><div class="line">       &#125; <span class="keyword">while</span> (assumed != old);</div><div class="line">       <span class="built_in">return</span> __longlong_as_double(old);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="comment">#endif</span></div><div class="line"><span class="comment">#endif</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem:&quot;&gt;&lt;/a&gt;Problem:&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;error: function &amp;quot;atomicAdd(double *
-    
-    </summary>
-    
-      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
-    
-    
-      <category term="Cuda" scheme="http://archerfmy.github.io/tags/Cuda/"/>
-    
-      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
-    
-  </entry>
-  
-  <entry>
     <title>How to use Hexo</title>
     <link href="http://archerfmy.github.io/2017/04/10/hello-world/"/>
     <id>http://archerfmy.github.io/2017/04/10/hello-world/</id>
-    <published>2017-04-10T10:29:00.024Z</published>
+    <published>2017-04-10T12:16:59.035Z</published>
     <updated>2017-04-10T09:25:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -99,6 +43,62 @@
     
     
       <category term="Hexo" scheme="http://archerfmy.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
+    <link href="http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/"/>
+    <id>http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</id>
+    <published>2017-04-10T12:16:59.034Z</published>
+    <updated>2017-04-10T09:25:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem:"></a>Problem:</h2><pre><code>error: function &quot;atomicAdd(double *, double)&quot; has already been defined
+</code></pre><p>Somebody get this error while trying to compile the cafffe derivative <a href="https://bitbucket.org/aquariusjay/deeplab-public-ver2" target="_blank" rel="external">DeepLab_v2</a> on Ubuntu 14.04.5 with Cuda 8.0.</p>
+<p>Maybe DeepLab_v2 compiles fine on another computer that has Cuda 7.5.</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis:"></a>Analysis:</h3><p>CUDA 8.0 provides a definition of <code>atomicAdd</code> on <code>double</code> quantities that was not present in previous CUDA toolkits. The code you are working with also apparently provides its own definition/implementation, and this is the source of the error message. The correct fix is to make source code changes to the software in question to make it compatible with CUDA 8. –<a href="http://stackoverflow.com/users/1695960/robert-crovella" target="_blank" rel="external">Robert Crovella</a></p>
+<h3 id="How-to-do"><a href="#How-to-do" class="headerlink" title="How to do:"></a>How to do:</h3><p>The solution provided by @Robert Crovella works for me. I had to modify the file <code>common.cuh</code> from the DeepLab_v2 master branch in the following way:<br>      <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#ifndef CAFFE_COMMON_CUH_</span></div><div class="line"><span class="comment">#define CAFFE_COMMON_CUH_</span></div><div class="line"></div><div class="line"><span class="comment">#include &lt;cuda.h&gt;</span></div><div class="line"></div><div class="line">   <span class="comment">#if !defined(__CUDA_ARCH__) || __CUDA_ARCH__ &gt;=600</span></div><div class="line"></div><div class="line">   <span class="comment">#else</span></div><div class="line">   static __inline__ __device__ double atomicAdd(double *address, double val) &#123;</div><div class="line">       unsigned long long int* address_as_ull = (unsigned long long int*)address;</div><div class="line">       unsigned long long int old = *address_as_ull, assumed;</div><div class="line">       <span class="keyword">if</span> (val==0.0)</div><div class="line">         <span class="built_in">return</span> __longlong_as_double(old);</div><div class="line">       <span class="keyword">do</span> &#123;</div><div class="line">           assumed = old;</div><div class="line">           old = atomicCAS(address_as_ull, assumed, __double_as_longlong(val +__longlong_as_double(assumed)));</div><div class="line">       &#125; <span class="keyword">while</span> (assumed != old);</div><div class="line">       <span class="built_in">return</span> __longlong_as_double(old);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="comment">#endif</span></div><div class="line"><span class="comment">#endif</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem:&quot;&gt;&lt;/a&gt;Problem:&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;error: function &amp;quot;atomicAdd(double *
+    
+    </summary>
+    
+      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
+    
+    
+      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
+    
+      <category term="Cuda" scheme="http://archerfmy.github.io/tags/Cuda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>make runtest error</title>
+    <link href="http://archerfmy.github.io/2017/04/10/make-runtest-error/"/>
+    <id>http://archerfmy.github.io/2017/04/10/make-runtest-error/</id>
+    <published>2017-04-10T12:16:59.029Z</published>
+    <updated>2017-04-10T09:25:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>caffe users:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Erro during compilation (make runtest): <span class="string">"error while loading shared libraries: libcudart.so.6.5"</span></div></pre></td></tr></table></figure></p>
+<p>For all the other folks who stop by looking for a solution:</p>
+<h2 id="Try"><a href="#Try" class="headerlink" title="Try:"></a>Try:</h2><h3 id="32-bit"><a href="#32-bit" class="headerlink" title="32-bit:"></a>32-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib</div></pre></td></tr></table></figure>
+<h3 id="64-bit"><a href="#64-bit" class="headerlink" title="64-bit:"></a>64-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
+<p>source: <a href="http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu" target="_blank" rel="external">http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;caffe users:&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;p
+    
+    </summary>
+    
+      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
+    
+    
+      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
     
   </entry>
   
