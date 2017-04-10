@@ -10,7 +10,7 @@
     <data>
         <display>
         <title>make runtest error</title>
-        <pubTime>2017-04-10T13:05:45.485Z</pubTime>
+        <pubTime>2017-04-10T13:07:46.879Z</pubTime>
         
         <tag>caffe</tag>
          
@@ -30,11 +30,11 @@
     <data>
         <display>
         <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
-        <pubTime>2017-04-10T13:05:45.479Z</pubTime>
+        <pubTime>2017-04-10T13:07:46.882Z</pubTime>
         
-        <tag>Cuda</tag>
-         
         <tag>caffe</tag>
+         
+        <tag>Cuda</tag>
          
          
            
@@ -52,7 +52,7 @@
     <data>
         <display>
         <title>How to use Hexo</title>
-        <pubTime>2017-04-10T13:05:45.484Z</pubTime>
+        <pubTime>2017-04-10T13:07:46.875Z</pubTime>
         
         <tag>Hexo</tag>
          
