@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://archerfmy.github.io/search/index.html</loc>
+    <loc>http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</loc>
     
-    <lastmod>2017-04-10T07:23:22.000Z</lastmod>
+    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://archerfmy.github.io/2017/04/10/hello-world/</loc>
+    
+    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://archerfmy.github.io/2017/04/10/make-runtest-error/</loc>
+    
+    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://archerfmy.github.io/index.html</loc>
     
-    <lastmod>2017-04-10T07:15:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://archerfmy.github.io/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</loc>
-    
-    <lastmod>2017-04-09T02:25:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://archerfmy.github.io/2017/04/09/make-runtest-error/</loc>
-    
-    <lastmod>2017-04-09T01:35:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://archerfmy.github.io/2017/04/08/hello-world/</loc>
-    
-    <lastmod>2017-04-08T15:11:20.000Z</lastmod>
+    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://archerfmy.github.io/categories/index.html</loc>
     
-    <lastmod>2017-04-08T14:27:30.000Z</lastmod>
+    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://archerfmy.github.io/search/index.html</loc>
+    
+    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://archerfmy.github.io/tags/index.html</loc>
     
-    <lastmod>2017-04-08T14:27:02.000Z</lastmod>
+    <lastmod>2017-04-10T09:25:22.000Z</lastmod>
     
   </url>
   
