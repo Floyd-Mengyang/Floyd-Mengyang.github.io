@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://archerfmy.github.io/search/index.html</loc>
+    
+    <lastmod>2017-04-10T07:23:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://archerfmy.github.io/index.html</loc>
+    
+    <lastmod>2017-04-10T07:15:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://archerfmy.github.io/2017/04/09/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</loc>
     
     <lastmod>2017-04-09T02:25:32.000Z</lastmod>
