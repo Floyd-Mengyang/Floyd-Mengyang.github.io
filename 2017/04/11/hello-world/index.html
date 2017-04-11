@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="caffe users:1Erro during compilation (make runtest): &quot;error while loading shared libraries: libcudart.so.6.5&quot; For all the other folks who stop by looking for a solution: Try:32-bit:1$ sudo ldconfig /u">
-<meta name="keywords" content="caffe">
+<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="make runtest error">
-<meta property="og:url" content="http://archerfmy.github.io/2017/04/10/make-runtest-error/index.html">
+<meta property="og:title" content="How to use Hexo">
+<meta property="og:url" content="http://archerfmy.github.io/2017/04/11/hello-world/index.html">
 <meta property="og:site_name" content="Mengyang's blog">
-<meta property="og:description" content="caffe users:1Erro during compilation (make runtest): &quot;error while loading shared libraries: libcudart.so.6.5&quot; For all the other folks who stop by looking for a solution: Try:32-bit:1$ sudo ldconfig /u">
-<meta property="og:updated_time" content="2017-04-10T12:33:40.000Z">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:updated_time" content="2017-04-11T00:50:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="make runtest error">
-<meta name="twitter:description" content="caffe users:1Erro during compilation (make runtest): &quot;error while loading shared libraries: libcudart.so.6.5&quot; For all the other folks who stop by looking for a solution: Try:32-bit:1$ sudo ldconfig /u">
+<meta name="twitter:title" content="How to use Hexo">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>make runtest error | Mengyang&#39;s blog</title>
+<title>How to use Hexo | Mengyang&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -202,6 +202,8 @@
                     
                       <a class="main-nav-link switch-friends-link" href="/chizhizhen.github.io">chizhizhen</a>
                     
+                      <a class="main-nav-link switch-friends-link" href="/scott89.github.io">scott89</a>
+                    
                     </div>
                 </section>
                 
@@ -262,11 +264,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-make-runtest-error" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/10/make-runtest-error/" class="article-date">
-      <time datetime="2017-04-10T14:23:49.395Z" itemprop="datePublished">2017-04-10</time>
+      <a href="/2017/04/11/hello-world/" class="article-date">
+      <time datetime="2017-04-11T08:31:33.541Z" itemprop="datePublished">2017-04-11</time>
 </a>
 
 
@@ -281,7 +283,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      make runtest error
+      How to use Hexo
     </h1>
   
 
@@ -290,13 +292,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Deeplearning/">Deeplearning</a>
+    <a class="article-category-link" href="/categories/Test/">Test</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -306,11 +308,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>caffe users:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Erro during compilation (make runtest): <span class="string">"error while loading shared libraries: libcudart.so.6.5"</span></div></pre></td></tr></table></figure></p>
-<p>For all the other folks who stop by looking for a solution:</p>
-<h2 id="Try"><a href="#Try" class="headerlink" title="Try:"></a>Try:</h2><h3 id="32-bit"><a href="#32-bit" class="headerlink" title="32-bit:"></a>32-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib</div></pre></td></tr></table></figure>
-<h3 id="64-bit"><a href="#64-bit" class="headerlink" title="64-bit:"></a>64-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
-<p>source: <a href="http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu" target="_blank" rel="external">http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu</a></p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
       
     </div>
@@ -319,13 +325,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2017/04/10/make-runtest-error/">make runtest error</a></p>
+        <p><span>Title:</span><a href="/2017/04/11/hello-world/">How to use Hexo</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mengyang</a></p>
-        <p><span>Created:</span>2017-04-10, 22:23:49</p>
-        <p><span>Updated:</span>2017-04-10, 20:33:40</p>
+        <p><span>Created:</span>2017-04-11, 16:31:33</p>
+        <p><span>Updated:</span>2017-04-11, 08:50:57</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/04/10/make-runtest-error/" title="make runtest error">http://archerfmy.github.io/2017/04/10/make-runtest-error/</a>
-            <span class="copy-path" data-clipboard-text="From http://archerfmy.github.io/2017/04/10/make-runtest-error/　　By Mengyang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/04/11/hello-world/" title="How to use Hexo">http://archerfmy.github.io/2017/04/11/hello-world/</a>
+            <span class="copy-path" data-clipboard-text="From http://archerfmy.github.io/2017/04/11/hello-world/　　By Mengyang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -338,11 +344,17 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/04/10/hello-world/">
-                    How to use Hexo
+                <a href="/2017/04/11/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/">
+                    compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0
                 </a>
             </div>
         
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/04/11/make-runtest-error/">
+                    make runtest error
+                </a>
+            </div>
         
     </nav>
 
@@ -352,7 +364,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Try"><span class="toc-number">1.</span> <span class="toc-text">Try:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#32-bit"><span class="toc-number">1.1.</span> <span class="toc-text">32-bit:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#64-bit"><span class="toc-number">1.2.</span> <span class="toc-text">64-bit:</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -388,7 +400,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"make runtest error　| Mengyang's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"How to use Hexo　| Mengyang's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -407,8 +419,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://archerfmy.github.io/2017/04/10/make-runtest-error/';
-            this.page.identifier = '2017/04/10/make-runtest-error/';
+            this.page.url = 'http://archerfmy.github.io/2017/04/11/hello-world/';
+            this.page.identifier = '2017/04/11/hello-world/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -430,7 +442,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/10/hello-world/" title="Pre: How to use Hexo">
+            <a href="/2017/04/11/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/" title="Pre: compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -438,11 +450,13 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2017/04/11/make-runtest-error/" title="Next: make runtest error">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/make-runtest-error/">make runtest error</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/hello-world/">How to use Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/">compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/11/make-runtest-error/">make runtest error</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/11/hello-world/">How to use Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/11/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/">compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</a></li></ul>
 
 
 
