@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://archerfmy.github.io/"/>
-  <updated>2017-04-11T11:41:08.000Z</updated>
+  <updated>2017-04-11T13:36:15.000Z</updated>
   <id>http://archerfmy.github.io/</id>
   
   <author>
@@ -16,11 +16,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>old Caffe version + OpenCV 3.1</title>
+    <link href="http://archerfmy.github.io/2017/04/11/old-Caffe-version-OpenCV-3-1/"/>
+    <id>http://archerfmy.github.io/2017/04/11/old-Caffe-version-OpenCV-3-1/</id>
+    <published>2017-04-11T13:17:44.000Z</published>
+    <updated>2017-04-11T13:36:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem:"></a>Problem:</h2><pre><code>caffe: compile error: undefined reference to &apos;cv::imread(cv::String const&amp;, int)&apos; et al.
+</code></pre><p>when I compile caffe file:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&amp;, int)<span class="string">'</span></div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&amp;, cv::_InputArray const&amp;, std::vector&lt;unsigned char, std::allocator&lt;unsigned char&gt; &gt;&amp;, std::vector&lt;int, std::allocator&lt;int&gt; &gt; const&amp;)'</div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&amp;, int)<span class="string">'</span></div><div class="line">collect2: error: ld returned 1 exit status</div><div class="line">.build_debug/lib/make: libcaffe.so: undefined *** [.build_debug/tools/upgrade_net_proto_text.bin] Error 1</div><div class="line">referencemake: *** Waiting for unfinished jobs....</div><div class="line"> to `cv.build_debug/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&amp;, int)'</div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&amp;, cv::_InputArray const&amp;, std::vector&lt;unsigned char, std::allocator&lt;unsigned char&gt; &gt;&amp;, std::vector&lt;int, std::allocator&lt;int&gt; &gt; const&amp;)<span class="string">'</span></div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::/_InputArray const&amp;, usrint)/bin/'ld: </div><div class="line">warning: libcudart.so.5.5, needed by /usr/<span class="built_in">local</span>/lib/libopencv_core.so, may conflict withcollect2: error: ld returned 1 <span class="built_in">exit</span> status</div><div class="line"> libcudart.so.7.5</div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&amp;, int)<span class="string">'</span></div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&amp;, cv::_InputArray const&amp;, std::vector&lt;unsigned char, std::allocator&lt;unsigned char&gt; &gt;&amp;, std::vector.&lt;int, std::allocatorbuild_debug&lt;int&gt; /&gt; constlib&amp;)'/libcaffe.so</div><div class="line">.build_debug/: lib/undefined referencelibcaffe.so: to make:  `*** [.build_debug/tools/upgrade_net_proto_binary.bin] Error 1cvundefined: :referenceimread</div><div class="line">( tocv:: `String cvconst&amp;::imdecode, int(cv)<span class="string">'</span></div><div class="line">.::_InputArraybuild_debug/ const&amp;lib, int/)'</div><div class="line">libcaffe.so: undefined reference to `cv::imencode(cv:collect2: error: ld returned 1 <span class="built_in">exit</span> status</div><div class="line">:String const&amp;, cv::_InputArray const&amp;, std::vector&lt;unsigned char, std::allocator&lt;unsigned char&gt; &gt;&amp;, std::vector&lt;int, std::allocator&lt;int&gt; &gt; const&amp;)<span class="string">'</span></div><div class="line">.build_debug/lib/libcaffe.so: make: undefined reference*** [.build_debug/tools/caffe.bin] Error 1 to</div><div class="line"> `cv::imdecode(cv::_InputArray const&amp;, int)'</div><div class="line">::imread(cv::String const&amp;, int)<span class="string">'</span></div><div class="line">collect2: error: ld returned 1 exit status</div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&amp;, cv::_InputArray const&amp;, std::vector&lt;unsigned char, std::allocator&lt;unsigned char&gt; &gt;&amp;, std::vector&lt;int, std::allocator&lt;int&gt; &gt; const&amp;)'</div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&amp;, int)<span class="string">'</span></div><div class="line">make: *** [.build_debug/tools/extract_features.bin] Error 1collect2: error: ld returned 1 exit status</div><div class="line"></div><div class="line">make: *** [.build_debug/tools/compute_image_mean.bin] Error 1</div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&amp;, int)'</div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&amp;, cv::_InputArray const&amp;, std::vector&lt;unsigned char, std::allocator&lt;unsigned char&gt; &gt;&amp;, std::vector&lt;int, std::allocator&lt;int&gt; &gt; const&amp;)<span class="string">'</span></div><div class="line">.build_debug/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&amp;, int)'</div><div class="line">collect2: error: ld returned 1 <span class="built_in">exit</span> status</div><div class="line">make: *** [.build_debug/tools/convert_imageset.bin] Error 1</div></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>add <code>opencv_imgcodecs</code> in <strong>Makefile</strong>   &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
+<pre><code>LIBRARIES += opencv_core opencv_highgui opencv_imgproc
+</code></pre><p>into</p>
+<pre><code>LIBRARIES += opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs
+</code></pre><p>then<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">make clean -j</div><div class="line">make all -j</div></pre></td></tr></table></figure></p>
+<p>github issues: <a href="https://github.com/BVLC/caffe/issues/2348" target="_blank" rel="external">https://github.com/BVLC/caffe/issues/2348</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem:&quot;&gt;&lt;/a&gt;Problem:&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;caffe: compile error: undefined referenc
+    
+    </summary>
+    
+      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
+    
+    
+      <category term="OpenCV" scheme="http://archerfmy.github.io/tags/OpenCV/"/>
+    
+      <category term="Caffe" scheme="http://archerfmy.github.io/tags/Caffe/"/>
+    
+  </entry>
+  
+  <entry>
     <title>compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</title>
-    <link href="http://archerfmy.github.io/2017/04/11/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/"/>
-    <id>http://archerfmy.github.io/2017/04/11/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</id>
-    <published>2017-04-11T11:41:08.000Z</published>
-    <updated>2017-04-11T11:41:08.000Z</updated>
+    <link href="http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/"/>
+    <id>http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</id>
+    <published>2017-04-10T10:47:12.000Z</published>
+    <updated>2017-04-11T13:19:57.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem:"></a>Problem:</h2><pre><code>error: function &quot;atomicAdd(double *, double)&quot; has already been defined
 </code></pre><p>Somebody get this error while trying to compile the cafffe derivative <a href="https://bitbucket.org/aquariusjay/deeplab-public-ver2" target="_blank" rel="external">DeepLab_v2</a> on Ubuntu 14.04.5 with Cuda 8.0.</p>
@@ -38,7 +71,34 @@
       <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
     
     
+      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
+    
       <category term="Cuda" scheme="http://archerfmy.github.io/tags/Cuda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>make runtest error</title>
+    <link href="http://archerfmy.github.io/2017/04/10/make-runtest-error/"/>
+    <id>http://archerfmy.github.io/2017/04/10/make-runtest-error/</id>
+    <published>2017-04-10T04:29:32.000Z</published>
+    <updated>2017-04-11T13:19:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>caffe users:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Erro during compilation (make runtest): <span class="string">"error while loading shared libraries: libcudart.so.6.5"</span></div></pre></td></tr></table></figure></p>
+<p>For all the other folks who stop by looking for a solution:</p>
+<h2 id="Try"><a href="#Try" class="headerlink" title="Try:"></a>Try:</h2><h3 id="32-bit"><a href="#32-bit" class="headerlink" title="32-bit:"></a>32-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib</div></pre></td></tr></table></figure>
+<h3 id="64-bit"><a href="#64-bit" class="headerlink" title="64-bit:"></a>64-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
+<p>source: <a href="http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu" target="_blank" rel="external">http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;caffe users:&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;p
+    
+    </summary>
+    
+      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
+    
     
       <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
     
@@ -46,10 +106,10 @@
   
   <entry>
     <title>How to use Hexo</title>
-    <link href="http://archerfmy.github.io/2017/04/11/hello-world/"/>
-    <id>http://archerfmy.github.io/2017/04/11/hello-world/</id>
-    <published>2017-04-11T11:41:08.000Z</published>
-    <updated>2017-04-11T11:41:08.000Z</updated>
+    <link href="http://archerfmy.github.io/2017/04/09/hello-world/"/>
+    <id>http://archerfmy.github.io/2017/04/09/hello-world/</id>
+    <published>2017-04-09T12:03:42.000Z</published>
+    <updated>2017-04-11T13:18:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
@@ -72,33 +132,6 @@
     
     
       <category term="Hexo" scheme="http://archerfmy.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>make runtest error</title>
-    <link href="http://archerfmy.github.io/2017/04/11/make-runtest-error/"/>
-    <id>http://archerfmy.github.io/2017/04/11/make-runtest-error/</id>
-    <published>2017-04-11T11:41:08.000Z</published>
-    <updated>2017-04-11T11:41:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>caffe users:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Erro during compilation (make runtest): <span class="string">"error while loading shared libraries: libcudart.so.6.5"</span></div></pre></td></tr></table></figure></p>
-<p>For all the other folks who stop by looking for a solution:</p>
-<h2 id="Try"><a href="#Try" class="headerlink" title="Try:"></a>Try:</h2><h3 id="32-bit"><a href="#32-bit" class="headerlink" title="32-bit:"></a>32-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib</div></pre></td></tr></table></figure>
-<h3 id="64-bit"><a href="#64-bit" class="headerlink" title="64-bit:"></a>64-bit:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo ldconfig /usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
-<p>source: <a href="http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu" target="_blank" rel="external">http://stackoverflow.com/questions/10808958/why-cant-libcudar-so-4-be-found-when-compiling-the-cuda-samples-under-ubuntu</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;caffe users:&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;p
-    
-    </summary>
-    
-      <category term="Deeplearning" scheme="http://archerfmy.github.io/categories/Deeplearning/"/>
-    
-    
-      <category term="caffe" scheme="http://archerfmy.github.io/tags/caffe/"/>
     
   </entry>
   

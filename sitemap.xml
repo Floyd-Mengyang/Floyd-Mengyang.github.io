@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://archerfmy.github.io/2017/04/11/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</loc>
+    <loc>http://archerfmy.github.io/2017/04/11/old-Caffe-version-OpenCV-3-1/</loc>
     
-    <lastmod>2017-04-11T11:41:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://archerfmy.github.io/2017/04/11/hello-world/</loc>
-    
-    <lastmod>2017-04-11T11:41:08.000Z</lastmod>
+    <lastmod>2017-04-11T13:36:15.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://archerfmy.github.io/2017/04/11/make-runtest-error/</loc>
+    <loc>http://archerfmy.github.io/2017/04/10/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/</loc>
     
-    <lastmod>2017-04-11T11:41:08.000Z</lastmod>
+    <lastmod>2017-04-11T13:19:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://archerfmy.github.io/2017/04/10/make-runtest-error/</loc>
+    
+    <lastmod>2017-04-11T13:19:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://archerfmy.github.io/2017/04/09/hello-world/</loc>
+    
+    <lastmod>2017-04-11T13:18:44.000Z</lastmod>
     
   </url>
   

@@ -17,7 +17,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mengyang's blog">
-<meta property="og:url" content="http://archerfmy.github.io/tags/caffe/index.html">
+<meta property="og:url" content="http://archerfmy.github.io/tags/Caffe/index.html">
 <meta property="og:site_name" content="Mengyang's blog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mengyang's blog">
@@ -50,7 +50,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: caffe | Mengyang&#39;s blog</title>
+<title>Tag: Caffe | Mengyang&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -71,7 +71,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -182,7 +184,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cuda/">Cuda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Caffe/">Caffe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cuda/">Cuda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
                     </div>
                 </section>
                 
@@ -274,8 +276,8 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
           <div class="article-meta">
-              <a href="/2017/04/11/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/" class="archive-article-date">
-      <time datetime="2017-04-11T11:41:08.000Z" itemprop="datePublished">04-11</time>
+              <a href="/2017/04/11/old-Caffe-version-OpenCV-3-1/" class="archive-article-date">
+      <time datetime="2017-04-11T13:17:44.000Z" itemprop="datePublished">04-11</time>
 </a>
 
 
@@ -283,7 +285,7 @@
          
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/compile-DeepLab-v2-on-Ubuntu-14-04-5-with-Cuda-8-0/">compile DeepLab_v2 on Ubuntu 14.04.5 with Cuda 8.0</a>
+      <a class="archive-article-title" href="/2017/04/11/old-Caffe-version-OpenCV-3-1/">old Caffe version + OpenCV 3.1</a>
     </h1>
   
 
@@ -296,44 +298,7 @@
 
           
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cuda/">Cuda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/11/make-runtest-error/" class="archive-article-date">
-      <time datetime="2017-04-11T11:41:08.000Z" itemprop="datePublished">04-11</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/make-runtest-error/">make runtest error</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Deeplearning/">Deeplearning</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Caffe/">Caffe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenCV/">OpenCV</a></li></ul>
     </div>
 
         </div>
@@ -402,6 +367,47 @@ MathJax.Hub.Config({
 MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>th; i += 1) {
         all[i].SourceElement().parentNode.className += ' has-jax';                 
     }       
 });
